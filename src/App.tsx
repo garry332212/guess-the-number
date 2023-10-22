@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import GameDisplayer from "./components/GameDisplayer";
 
 function App() {
+  const [randomNum, setRamdomNun] = React.useState<number | undefined>();
+
+  React.useEffect(() => {
+    randNumGenerator();
+  }, []);
+
+  const randNumGenerator = () => {
+    let num1 = Math.floor(Math.random() * 20) + 1;
+    setRamdomNun(num1);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <GameDisplayer randNum={randomNum || 0} />
     </div>
   );
 }

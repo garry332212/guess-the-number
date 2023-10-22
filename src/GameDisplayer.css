@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Nosifer&family=VT323&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background: linear-gradient(
+    90deg,
+    rgba(68, 128, 236, 1) 0%,
+    rgba(254, 183, 69, 1) 100%
+  );
+  height: 100vh;
+}
+
+.container {
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(1, 88, 26, 1) 0%,
+    rgba(4, 8, 107, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90vh;
+  filter: drop-shadow(10px 10px 4px #000000);
+}
+.container > .topSection {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.topSection > .line {
+  height: 10px;
+  border: 1px solid white;
+  width: 50%;
+  background-color: blanchedalmond;
+}
+.topSection > h1 {
+  background-color: aliceblue;
+  padding: 6px 20px;
+  color: black;
+  font-size: 3rem;
+  border-radius: 40px;
+}
+
+.title h1 {
+  font-size: 3rem;
+  font-family: "Nosifer", sans-serif;
+  padding: 0 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.middleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.middleSection p {
+  font-size: 3rem;
+  font-family: "VT323", monospace;
+  transition: all 0.3s ease-in-out;
+}
+.middleSection p:nth-child(3) {
+  margin-top: 20px;
+  font-size: 4rem;
+  font-family: "Fjalla One", sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+.middleSection button {
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.inputArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.inputArea > input {
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  height: 50px;
+  text-align: center;
+  font-size: 1.5rem;
+  background: linear-gradient(
+    90deg,
+    rgba(218, 245, 242, 1) 0%,
+    rgba(190, 245, 236, 1) 100%
+  );
+}
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+ button  {
+  margin-top: 20px;
+  border-radius: 6px;
+  font-size: 1.8rem;
+  color: #ffffff;
+  cursor: pointer;
+  height: 50px;
+  outline: none;
+  border: none;
+  padding: 0 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  font-family: "VT323", monospace;
+}
+
+.buttons > button:nth-child(1){
+  background-image: linear-gradient(-180deg, #ff7e31, #e62c03);
+}
+.buttons > button:nth-child(2){
+  background-image: linear-gradient(-180deg, #b7ff31, #03e6b1);
+  color: black;
+}
+ button:nth-child(3){
+  background-image: linear-gradient(-180deg, #05806a, #7b1fcc);
+  
+}
+
+button:hover {
+  filter: drop-shadow(0 0 14px #6be31b);
+}
+
+/*//! DO THIS AFTER THE LOGIC  */
+@media screen and (max-width: 1336px) {
+  .title h1 {
+    font-size: 2rem;
+  }
+
+  .middleSection {
+    padding: 5px;
+  }
+
+  .middleSection p:nth-child(3) {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .title h1 {
+    font-size: 2rem;
+  }
+  .middleSection p {
+    font-size: 2.3rem;
+  }
+
+  .middleSection p:nth-child(3) {
+    font-size: 2.2rem;
+  }
+
+  .inputArea > input {
+    font-size: 1rem;
+  }
+   button {
+   
+    font-size: 1.2rem;
+    height:30px;
+  }
+
+ 
+}
