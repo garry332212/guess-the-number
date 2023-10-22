@@ -1,4 +1,7 @@
 
+## Check The Deployed Version - Link Below 
+`https://guess-hidden-number-org.netlify.app/`
+
 ## Available Scripts
 
 In the project directory, you can run:
