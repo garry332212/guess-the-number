@@ -14,6 +14,21 @@
   );
   height: 100vh;
 }
+/* //! DO LATER */
+.correctGuess {
+  height: 100vh;
+  background: linear-gradient(90deg, rgb(11, 153, 51) 0%, rgb(43, 160, 7) 100%);
+}
+
+.gameOver {
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgb(209, 22, 9) 0%,
+    rgb(227, 10, 10) 100%
+  );
+}
+/* _________________________________________ */
 
 .container {
   color: white;
@@ -123,7 +138,7 @@ input::-webkit-inner-spin-button {
   width: 100%;
 }
 
- button  {
+button {
   margin-top: 20px;
   border-radius: 6px;
   font-size: 1.8rem;
@@ -138,16 +153,15 @@ input::-webkit-inner-spin-button {
   font-family: "VT323", monospace;
 }
 
-.buttons > button:nth-child(1){
+.buttons > button:nth-child(1) {
   background-image: linear-gradient(-180deg, #ff7e31, #e62c03);
 }
-.buttons > button:nth-child(2){
+.buttons > button:nth-child(2) {
   background-image: linear-gradient(-180deg, #b7ff31, #03e6b1);
   color: black;
 }
- button:nth-child(3){
+button:nth-child(3) {
   background-image: linear-gradient(-180deg, #05806a, #7b1fcc);
-  
 }
 
 button:hover {
@@ -183,11 +197,8 @@ button:hover {
   .inputArea > input {
     font-size: 1rem;
   }
-   button {
-   
+  button {
     font-size: 1.2rem;
-    height:30px;
+    height: 30px;
   }
-
- 
 }

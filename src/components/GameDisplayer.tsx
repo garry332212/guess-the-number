@@ -6,6 +6,7 @@ interface Props {
   randNum: number;
 }
 
+
 const GameDisplayer: React.FC<Props> = ({ randNum }) => {
   const [checkValue, setCheckValue] = useState<number | undefined>();
 
@@ -37,10 +38,12 @@ const GameDisplayer: React.FC<Props> = ({ randNum }) => {
           setOutput("Correct Guess");
           setCorrectAsnswer(true);
         } else {
-          setOutput(checkValue > randNum ? "Guess Is Higher" : "Guess Is Lower");
+          setOutput(
+            checkValue > randNum ? "Guess Is Higher" : "Guess Is Lower"
+          );
           setScore(score - 1);
         }
-  
+
         // Check if the game is over (score is 0)
         if (score - 1 === 0) {
           setOutput("Game Over");
@@ -49,7 +52,6 @@ const GameDisplayer: React.FC<Props> = ({ randNum }) => {
       }
     }
   };
-  
 
   React.useEffect(() => {
     if (correctAnswer) {
@@ -64,7 +66,6 @@ const GameDisplayer: React.FC<Props> = ({ randNum }) => {
   const resetLocalStorage = () => {
     localStorage.removeItem("highScore");
     setHighScore(0); // Reset high score in the component state
-
   };
 
   const relaodGame = () => {
@@ -72,7 +73,11 @@ const GameDisplayer: React.FC<Props> = ({ randNum }) => {
   };
 
   return (
-    <div className="main">
+    <div
+      className={`${
+        correctAnswer ? "correctGuess" : score === 0 ? "gameOver" : `main`
+      }`}
+    >
       <div className="container">
         <div className="topSection">
           <div className="line"></div>

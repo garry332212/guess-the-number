@@ -2,6 +2,8 @@ import React from "react";
 import GameDisplayer from "./components/GameDisplayer";
 
 function App() {
+
+  //!Step 1
   const [randomNum, setRamdomNun] = React.useState<number | undefined>();
 
   React.useEffect(() => {
